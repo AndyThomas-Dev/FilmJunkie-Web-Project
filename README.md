@@ -5,6 +5,12 @@ The website is intended to display content for a (fictional) group of film criti
 === Main Page ===
 Highlighted article 
 
+=== About ===
+
+https://www.pexels.com/photo/man-wearing-black-zip-up-jacket-near-beach-smiling-at-the-photo-736716/
+https://www.pexels.com/photo/man-standing-on-street-839011/
+https://www.pexels.com/photo/closeup-photo-of-woman-with-brown-coat-and-gray-top-733872/
+
 === All Films ===
 
 accessed using SQLite3 and Ajax
