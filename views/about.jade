@@ -1,25 +1,37 @@
 extends layout
 block content 
   .tab
-    button#defaultOpen.tablinks(onclick="openCity(event, 'Education')") Education
-    button.tablinks(onclick="openCity(event, 'Professional')") Professional
-    button.tablinks(onclick="openCity(event, 'Speaking')") Speaking
+    button#defaultOpen.tablinks(onclick="openCity(event, 'John')") John Smith
+    button.tablinks(onclick="openCity(event, 'James')") James Joyce
+    button.tablinks(onclick="openCity(event, 'Sarah')") Sarah Miller
 
-  #Education.tabcontent
+  #John.tabcontent
     center
       h3 John Smith
       img(src='/images/john.png', alt='John')
-      p London is the capital city of England.
-  #Professional.tabcontent
+
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod tristique mauris, vitae lobortis libero dictum eget. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed diam sem, egestas at varius in, imperdiet non sem. In ut nibh a odio egestas porttitor. Suspendisse eu neque sit amet augue cursus suscipit non in quam. Ut pharetra purus vitae pretium accumsan. Ut convallis sagittis eleifend. Nulla facilisi. Ut id nisl sollicitudin dolor porta consequat in id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam mollis massa vel consequat bibendum. Integer pulvinar justo id tellus accumsan vehicula. Nam vel nibh feugiat, fermentum justo eu, feugiat diam. Duis iaculis ante id ultrices rhoncus. Curabitur lacinia suscipit lectus et lobortis.
+
+    p Fusce lacinia malesuada libero, euismod vulputate enim egestas ut. Aliquam eu magna nisl. Etiam vitae lorem interdum, tincidunt felis ultrices, varius lectus. Nullam euismod diam felis. Sed pretium facilisis nulla, sit amet volutpat tortor condimentum in. Suspendisse nulla felis, elementum in mi id, ullamcorper fermentum lorem. Fusce tempus, lacus eu vulputate ultricies, magna nisl feugiat est, nec rhoncus erat velit nec justo. Donec vel tempus quam, at placerat mi.
+
+  #James.tabcontent
     center
       h3 James Joyce
       img(src='/images/james.png', alt='John')
-      p Paris is the capital of France.
-  #Speaking.tabcontent
+
+    p Aliquam erat volutpat. Nunc ornare lorem id laoreet lacinia. Quisque tempus nisi non dui ultrices, et blandit magna facilisis. Quisque ligula nulla, ultricies sit amet tincidunt eu, viverra quis velit. Vivamus vitae scelerisque massa. Fusce quis nibh malesuada, ultrices metus at, lacinia arcu. Mauris ac rutrum lectus. Fusce maximus dui non orci finibus, ac pulvinar eros vestibulum. Nulla risus odio, efficitur a elit nec, tincidunt malesuada augue. Nullam cursus ex vel ipsum malesuada sollicitudin. Pellentesque vitae lectus mauris. Vivamus sed dignissim ex.
+
+    p Morbi eget fringilla felis, at commodo dolor. In non est ultrices, porttitor turpis in, consequat metus. Etiam at varius eros. Fusce elementum malesuada velit, quis ullamcorper mi convallis vitae. Proin eget augue eu arcu dapibus ullamcorper. Mauris eu ligula fermentum odio consectetur egestas. Maecenas ipsum augue, posuere ac diam nec, mollis imperdiet lorem. Nulla nec efficitur enim. In vel purus feugiat, tempor felis eu, fringilla leo. Morbi hendrerit lobortis orci nec ullamcorper. Proin a felis pulvinar, volutpat nibh ut, cursus enim. Aliquam sit amet lacus neque.
+
+  #Sarah.tabcontent
     center
       h3 Sarah Miller
       img(src='/images/sarah.png', alt='Sarah')
-      p Paris is the capital of France.
+
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod tristique mauris, vitae lobortis libero dictum eget. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed diam sem, egestas at varius in, imperdiet non sem. In ut nibh a odio egestas porttitor. Suspendisse eu neque sit amet augue cursus suscipit non in quam. Ut pharetra purus vitae pretium accumsan. Ut convallis sagittis eleifend. Nulla facilisi. Ut id nisl sollicitudin dolor porta consequat in id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam mollis massa vel consequat bibendum. Integer pulvinar justo id tellus accumsan vehicula. Nam vel nibh feugiat, fermentum justo eu, feugiat diam. Duis iaculis ante id ultrices rhoncus. Curabitur lacinia suscipit lectus et lobortis.
+
+    p Fusce lacinia malesuada libero, euismod vulputate enim egestas ut. Aliquam eu magna nisl. Etiam vitae lorem interdum, tincidunt felis ultrices, varius lectus. Nullam euismod diam felis. Sed pretium facilisis nulla, sit amet volutpat tortor condimentum in. Suspendisse nulla felis, elementum in mi id, ullamcorper fermentum lorem. Fusce tempus, lacus eu vulputate ultricies, magna nisl feugiat est, nec rhoncus erat velit nec justo. Donec vel tempus quam, at placerat mi.
+    
     script.
       function openCity(evt, cityName) {
       var i, tabcontent, tablinks;
