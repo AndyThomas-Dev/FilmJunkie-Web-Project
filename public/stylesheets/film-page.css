@@ -129,6 +129,6 @@ img {
   margin-right: auto;
   background: #fff;
   padding: 20px;
-  overflow: scroll;
+  overflow: auto;
 }
 

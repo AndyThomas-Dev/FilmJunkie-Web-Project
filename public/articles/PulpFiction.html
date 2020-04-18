@@ -51,7 +51,7 @@
 </head>
 
 <body>
-    <header><img src="/images/header-plain.svg"></header>
+    <header><a href="/"><img src="/images/header-plain.svg"></a></header>
     <div class="sidenav">
         <nav>
             <ul>
@@ -66,15 +66,14 @@
         <div class="slideshow-container">
             <div class="mySlides fade">
               <div class="numbertext">1 / 3</div><img src="/images/1917-1.png" style="width:100%" id="box1">
-              <div class="text">Caption Text</div>
+              <div class="text">John Travolta and Samuel L. Jackson</div>
             </div>
             <div class="mySlides fade">
               <div class="numbertext">2 / 3</div><img src="/images/1917-2.png" style="width:100%" id="box2">
-              <div class="text">Caption Two</div>
+              <div class="text">John Travolta and Uma Thurman</div>
             </div>
             <div class="mySlides fade">
               <div class="numbertext">3 / 3</div><img src="/images/1917-3.png" style="width:100%" id="box3">
-              <div class="text">Caption Three</div>
             </div><a onclick="plusSlides(-1)" class="prev">❮</a><a onclick="plusSlides(1)" class="next">❯</a>
           </div>
 
@@ -92,8 +91,6 @@
             <span class="fa fa-star"></span>
             <span class="fa fa-star" id="star5"></span>
             <h3>Review by James Joyce</h3>
-            <button onclick="addToFavourites()" type="button">Add to Favourites?</button>
-            <div id="result"></div>
         </center>
         
         <div class="row">
@@ -111,22 +108,7 @@
 
         </div>
       
-    <div class="clearfix"></div>
     </section>
-
-    <script>function addToFavourites() {
-        if(typeof(Storage) !== "undefined") {
-          if (localStorage.clickcount > 1) {
-            document.getElementById("result").innerHTML = "Already added to favourites!";
-          } else {
-            localStorage.clickcount = 1;
-            document.getElementById("result").innerHTML = "Film added to favourites!";
-          }
-        } else {
-          document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-        }
-      }
-    </script>
 
     <script>
         var slideIndex = 1;
