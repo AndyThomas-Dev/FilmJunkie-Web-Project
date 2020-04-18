@@ -1,0 +1,69 @@
+extends layout
+
+block content
+  h1= title
+
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+  script.
+    $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+    });
+    });
+    
+  style.
+    table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+    td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    }
+    tr:nth-child(even) {
+    background-color: #dddddd;
+    }
+    
+    .input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    }
+
+  input#myInput(type='text', placeholder='Search..')
+  br
+  br
+  table
+    thead
+      tr
+        th Firstname
+        th Lastname
+        th Rating
+    tbody#myTable
+      tr
+        td John
+        td Doe
+        td john@example.com
+      tr
+        td Mary
+        td Moe
+        td mary@mail.com
+      tr
+        td July
+        td Dooley
+        td july@greatstuff.com
+      tr
+        td Anja
+        td Ravendale
+        td a_r@test.com
+

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FilmJunkie.com</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="shortcut icon" href="/stylesheets/favicon.ico">
+    <link rel="stylesheet" href="/stylesheets/film-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script> 
+      var a = 30;
+      var b = 1;
+    
+      var c = document.getElementById('timer').innerHTML = a - b;
+      document.title = c;
+      top.document.title='New Title (was set programmatically)'
+
+    </script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 300px; /* Should be removed. Only for demonstration */
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
+      </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <header><img src="/images/header-plain.svg"></header>
+    <div class="sidenav">
+        <nav>
+            <ul>
+                <li> <a href="/">Home</a></li>
+                <li> <a href="/about">About</a></li>
+                <li> <a href="/contact">Contact</a></li>
+                <li> <a href="/films">All Films</a></li>
+                <li> <a href="/template">Template</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section id="wrapper" >
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div><img src="/images/1917-1.png" style="width:100%" id="box1">
+              <div class="text">Caption Text</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div><img src="/images/1917-2.png" style="width:100%" id="box2">
+              <div class="text">Caption Two</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div><img src="/images/1917-3.png" style="width:100%" id="box3">
+              <div class="text">Caption Three</div>
+            </div><a onclick="plusSlides(-1)" class="prev">❮</a><a onclick="plusSlides(1)" class="next">❯</a>
+          </div>
+
+          <div style="text-align:center">
+            <span onclick="currentSlide(1)" class="dot"></span>
+            <span onclick="currentSlide(2)" class="dot"></span>
+            <span onclick="currentSlide(3)" class="dot"></span>
+          </div>
+
+        <center>
+            <h1>"An Amazing Spectacle"</h1>
+            <span class="fa fa-star checked" id="star1"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star" id="star5"></span>
+            <h3>Review by James Joyce</h3>
+            <button onclick="addToFavourites()" type="button">Add to Favourites?</button>
+            <div id="result"></div>
+        </center>
+        
+        <div class="row">
+          <div class="column">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non nisi est sit amet facilisis. Ac orci phasellus egestas tellus rutrum tellus pellentesque. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Accumsan sit amet nulla facilisi morbi. Duis ultricies lacus sed turpis tincidunt. Imperdiet dui accumsan sit amet nulla. Metus vulputate eu scelerisque felis. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor. Sed nisi lacus sed viverra tellus in. Ut porttitor leo a diam sollicitudin tempor id eu nisl.</p>
+
+            <p>Massa ultricies mi quis hendrerit dolor magna eget est lorem. Vitae ultricies leo integer malesuada nunc vel risus. Feugiat in fermentum posuere urna nec tincidunt praesent semper. Ac odio tempor orci dapibus. Tortor consequat id porta nibh. Semper auctor neque vitae tempus quam pellentesque nec nam aliquam. Sollicitudin aliquam ultrices sagittis orci a. Tortor condimentum lacinia quis vel eros donec ac odio tempor. Porttitor massa id neque aliquam vestibulum morbi blandit cursus risus. Faucibus nisl tincidunt eget nullam. Porta lorem mollis aliquam ut porttitor leo. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Tempus imperdiet nulla malesuada pellentesque elit eget. Augue neque gravida in fermentum et sollicitudin ac orci. Posuere urna nec tincidunt praesent semper feugiat nibh. Vitae ultricies leo integer malesuada. Morbi tincidunt augue interdum velit euismod in.</p>
+
+          </div>
+          <div class="column">
+            <p>A scelerisque purus semper eget duis at tellus at. Nullam non nisi est sit amet facilisis magna etiam. Tristique sollicitudin nibh sit amet commodo nulla. Ac felis donec et odio. Et leo duis ut diam quam nulla porttitor massa id. Dictumst quisque sagittis purus sit. Vulputate odio ut enim blandit volutpat maecenas volutpat blandit aliquam. Dui nunc mattis enim ut tellus elementum sagittis vitae. Vulputate mi sit amet mauris commodo. Elementum pulvinar etiam non quam lacus. Dui id ornare arcu odio ut sem nulla pharetra diam. Eget nulla facilisi etiam dignissim diam. Faucibus turpis in eu mi. Sodales ut eu sem integer vitae justo eget. Nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus.</p> 
+
+            <p>Massa vitae tortor condimentum lacinia quis vel. Diam quam nulla porttitor massa id neque aliquam vestibulum. Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque. Ac placerat vestibulum lectus mauris ultrices eros in cursus. Morbi tristique senectus et netus et. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus. Fermentum et sollicitudin ac orci. Risus feugiat in ante metus dictum at tempor. Urna cursus eget nunc scelerisque viverra mauris in aliquam sem. Cursus mattis molestie a iaculis at erat pellentesque. Nibh praesent tristique magna sit.</p>
+          </div>
+
+        </div>
+      
+    <div class="clearfix"></div>
+    </section>
+
+    <script>function addToFavourites() {
+        if(typeof(Storage) !== "undefined") {
+          if (localStorage.clickcount > 1) {
+            document.getElementById("result").innerHTML = "Already added to favourites!";
+          } else {
+            localStorage.clickcount = 1;
+            document.getElementById("result").innerHTML = "Film added to favourites!";
+          }
+        } else {
+          document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        }
+      }
+    </script>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
+
+  <script type="text/javascript">
+
+  // Sets up the page
+  function setTitle() 
+  {
+      var pageTitle = 'Pulp Fiction';
+      var shortenedPageTitle = pageTitle.replace(/ /g,'');
+      top.document.title = pageTitle + ' - FilmJunkie.com';
+
+      document.getElementById('box1').src = "/images/" + shortenedPageTitle + "-1.png";
+      document.getElementById('box2').src = "/images/" + shortenedPageTitle + "-2.png";
+      document.getElementById('box3').src = "/images/" + shortenedPageTitle + "-3.png";
+
+      document.getElementById("star5").classList.add('fa fa-star checked');
+
+      if ( document.getElementById("star5").classList.contains('fa fa-star') )
+      {
+        document.getElementById("star5").classList.toggle('fa fa-star checked');
+      }
+  }
+  window.onload = setTitle;
+  </script>
+
+</body>
+
+</html>

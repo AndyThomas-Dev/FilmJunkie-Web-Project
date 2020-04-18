@@ -1,0 +1,65 @@
+extends layout
+
+block content
+  link(href='//fonts.googleapis.com/css?family=Montserrat', rel='stylesheet', type='text/css')
+  link(href='//fonts.googleapis.com/css?family=Lato', rel='stylesheet', type='text/css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css')
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+
+  // Toastr
+  script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+  script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js', integrity='sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=', crossorigin='anonymous')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+
+  // Toastr javascript
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js')
+
+  style.
+    .table .table {
+      background-color: #e6e6e6
+    }
+    body {background-color: #f2f2f2;}
+    #wrapper {
+    width: 70%;
+    background: #f2f2f2;
+    padding: 5px;
+    }
+
+  .container
+    .jumbotron(style='background-color: #e6e6e6; padding-top: 20px')
+      center 
+        .h2 Film Review Library
+      .row
+        .col-md-12
+          table#employeeTable.table
+            thead
+              tr
+                th Date 
+                th Genre
+                th Reviewer
+                th Film
+                th Rating
+                th Link
+            tbody
+      .row
+        button#refresh.btn.btn-primary(type='button') Refresh
+
+  // /.container
+  // Modal error message
+  #ajax-error-box.modal.fade(role='dialog')
+    .modal-dialog.modal-lg
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal') ×
+          h4.modal-title Modal Header
+        .modal-body
+          span#ajax-error
+        .modal-footer
+          button.btn.btn-danger(type='button', data-dismiss='modal') Close
+
+  script(src='/javascripts/ajaxProxy.js')
+  script(src='/javascripts/employeeList.js')
+  script(type='javascript').
+
+

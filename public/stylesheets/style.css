@@ -1,0 +1,76 @@
+body {
+  font: 105%/1.5 Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
+  text-align: center;
+  background: #000;
+}
+input {
+  width: 30%;
+}
+input[type=text]:focus {
+  background-color: #add8e6;
+}
+.search {
+  color: #818181;
+  font-size: 25px;
+}
+.submit {
+  color: #818181;
+  width: 10%;
+  font-size: 25px;
+}
+.sidenav {
+  height: 100%;
+  width: 230px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sidenav a {
+  padding: 10px 2px 2px 45px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  font-size: 30px;
+}
+.sidenav a:hover {
+  font-weight: 900;
+  color: #f1f1f1;
+}
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+.tab button:hover {
+  background-color: #ddd;
+}
+.tab button.active {
+  background-color: #ccc;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+#wrapper {
+  width: 70%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  padding: 20px;
+}

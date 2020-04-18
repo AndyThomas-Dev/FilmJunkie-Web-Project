@@ -1,0 +1,28 @@
+doctype
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='shortcut icon', href='/stylesheets/favicon.ico')
+
+  body
+    header
+      a(href='/')
+        img(src='/images/header-plain.svg')
+      
+    .sidenav
+      nav
+        ul
+          li 
+            a(href="/") Home
+          li 
+            a(href="/about") About
+          li 
+            a(href="/contact") Contact
+          li 
+            a(href="/films") All Films
+          li 
+            a(href="/template") Template
+
+    section#wrapper
+        block content
