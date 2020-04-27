@@ -1,0 +1,23 @@
+HTML: A
+	
+CSS: A
+	- Use of fade in & fade out (on hover) effects.
+	- Slideshow effects.
+
+JS (Client-side): B
+	-
+	- Buttons 
+
+PNG: C
+	I have done some cropping & resizing but definitely need to do some more complex operations 	for the final version.
+
+SVG: C
+	I have used Inkscape to create a very basic header but again need to perform more complex 		operations for the final version.
+	
+Sever: C
+
+Database: C
+
+Dynamic pages: C/B
+	
+	

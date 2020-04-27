@@ -1,3 +1,6 @@
+=== Run ===
+Run using command:
+	DEBUG=website:* npm start
 
 === Purpose ===
 The website is intended to display content for a (fictional) group of film critics. The primary content is film reviews
