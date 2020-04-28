@@ -1,4 +1,10 @@
+
+=== Estimated Grades ===
+
 HTML: A
+	- Significant use of HTMl in a variety of forms.
+	- Regular use of W3 validator.
+	- Use of templating using Jade.
 	
 CSS: A
 	- Use of fade in & fade out (on hover) effects.
@@ -8,8 +14,10 @@ JS (Client-side): B
 	-
 	- Buttons 
 
-PNG: C
-	I have done some cropping & resizing but definitely need to do some more complex operations 	for the final version.
+PNG: B
+	- Exporting as PNG
+	- Cropping/resizing
+	- Converting to grayscale, amending levels for effect (see About section).
 
 SVG: C
 	I have used Inkscape to create a very basic header but again need to perform more complex 		operations for the final version.
@@ -19,5 +27,7 @@ Sever: C
 Database: C
 
 Dynamic pages: C/B
+
+A quick thank you.
 	
 	
