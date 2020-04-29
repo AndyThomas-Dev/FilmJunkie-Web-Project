@@ -1,18 +1,17 @@
-
 === Estimated Grades ===
 
 HTML: A
 	- Significant use of HTMl in a variety of forms.
 	- Regular use of W3 validator.
-	- Use of templating using Jade.
 	
 CSS: A
 	- Use of fade in & fade out (on hover) effects.
-	- Slideshow effects.
+	- Customising text layouts.
 
-JS (Client-side): B
-	-
+JS (Client-side): A/B
+	- Slideshows
 	- Buttons 
+	- Star ratings
 
 PNG: B
 	- Exporting as PNG
@@ -20,14 +19,22 @@ PNG: B
 	- Converting to grayscale, amending levels for effect (see About section).
 
 SVG: C
-	I have used Inkscape to create a very basic header but again need to perform more complex 		operations for the final version.
+	- Used Inkscape to create basic header svg file
+	- Created favicon icon
 	
 Sever: C
+	- Set up a server using an express tutorial.
 
 Database: C
+	- Manually created a database & details are extracted.
 
 Dynamic pages: C/B
+	- Use of Javascript routes to switch between views
+	- Use of templating using Jade.
+	- Elements of page are dynamically set up via Javascript (will be linked to database eventually).
+	
+=== Queries ===
+- I am finding the server/database side the most difficult to get to grips with. Any advice in this regard is greatly appreciated.
+- I have used bootstrap CSS occasionally (notably on the database section) - is this acceptable as I am demonstrating competence in CSS on other areas of the website?
 
-A quick thank you.
-	
-	
+A big thank you for your help.

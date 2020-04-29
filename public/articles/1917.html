@@ -1,47 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
 
 <head>
-    <title>1917 - FilmJunkie.com</title>
+    <title>FilmJunkie.com</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="shortcut icon" href="/stylesheets/favicon.ico">
     <link rel="stylesheet" href="/stylesheets/film-page.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      
-      /* Create two equal columns that floats next to each other */
-      .column {
-        float: left;
-        width: 50%;
-        padding: 10px;
-        height: 300px; /* Should be removed. Only for demonstration */
-      }
-      
-      /* Clear floats after the columns */
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-      
-      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-      @media screen and (max-width: 600px) {
-        .column {
-          width: 100%;
-        }
-      }
-      </style>
-
+    <link rel="shortcut icon" href="/stylesheets/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
-    <header><a href="/"><img src="/images/header-plain.svg"></a></header>
+    <header><a href="/"><img src="/images/header-plain.svg" alt="FilmJunkie.com"></a></header>
     <div class="sidenav">
         <nav>
             <ul>
@@ -55,16 +27,15 @@
     <section id="wrapper" >
         <div class="slideshow-container">
             <div class="mySlides fade">
-              <div class="numbertext">1 / 3</div><img src="/images/1917-1.png" style="width:100%">
-              <div class="text">Caption Text</div>
+              <div class="numbertext">1 / 3</div><img src="/images/1917-1.png" alt="Slide1" style="width:100%" id="box1">
+              <div class="text">John Travolta and Samuel L. Jackson</div>
             </div>
             <div class="mySlides fade">
-              <div class="numbertext">2 / 3</div><img src="/images/1917-2.png" style="width:100%">
-              <div class="text">Caption Two</div>
+              <div class="numbertext">2 / 3</div><img src="/images/1917-2.png" alt="Slide2" style="width:100%" id="box2">
+              <div class="text">John Travolta and Uma Thurman</div>
             </div>
             <div class="mySlides fade">
-              <div class="numbertext">3 / 3</div><img src="/images/1917-3.png" style="width:100%">
-              <div class="text">Caption Three</div>
+              <div class="numbertext">3 / 3</div><img src="/images/1917-3.png" alt="Slide3" style="width:100%" id="box3">
             </div><a onclick="plusSlides(-1)" class="prev">❮</a><a onclick="plusSlides(1)" class="next">❯</a>
           </div>
 
@@ -72,20 +43,15 @@
             <span onclick="currentSlide(1)" class="dot"></span>
             <span onclick="currentSlide(2)" class="dot"></span>
             <span onclick="currentSlide(3)" class="dot"></span>
-          </div>
 
-        <center>
             <h1>"An Amazing Spectacle"</h1>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
+            <span class="fa fa-star" id="one"></span>
+            <span class="fa fa-star" id="two"></span>
+            <span class="fa fa-star" id="three"></span>
+            <span class="fa fa-star" id="four"></span>
+            <span class="fa fa-star" id="five"></span>
             <h3>Review by James Joyce</h3>
-            <button onclick="addToFavourites()" type="button">Add to Favourites?</button>
-            <div id="result"></div>
-        </center>
-
+          </div>
         
         <div class="row">
           <div class="column">
@@ -102,48 +68,73 @@
 
         </div>
       
-    <div class="clearfix"></div>
     </section>
 
-    <script>function addToFavourites() {
-        if(typeof(Storage) !== "undefined") {
-          if (localStorage.clickcount > 1) {
-            document.getElementById("result").innerHTML = "Already added to favourites!";
-          } else {
-            localStorage.clickcount = 1;
-            document.getElementById("result").innerHTML = "Film added to favourites!";
-          }
-        } else {
-          document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-        }
-      }
-    </script>
+  <!-- For the slideshow -->
+  <script>
+    
+      var slideIndex = 1;
+      showSlides(slideIndex);
 
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        function plusSlides(n) {
-        showSlides(slideIndex += n);
-        }
-        function currentSlide(n) {
-        showSlides(slideIndex = n);
-        }
-        function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-        }
-    </script>
+      function plusSlides(n) 
+      {
+      showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) 
+      {
+      showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) 
+      {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      }
+  </script>
+
+ <!-- The below scripts set up various elements of the page (intention is to link this directly to database) -->
+  <script>
+  function setTitle() 
+  {
+      var pageTitle = '1917';
+      var shortenedPageTitle = pageTitle.replace(/ /g,'');
+      top.document.title = pageTitle + ' - FilmJunkie.com';
+
+      document.getElementById('box1').src = "/images/" + shortenedPageTitle + "-1.png";
+      document.getElementById('box2').src = "/images/" + shortenedPageTitle + "-2.png";
+      document.getElementById('box3').src = "/images/" + shortenedPageTitle + "-3.png";
+
+      // User inputs star rating here
+      setRating(5);
+  }
+  window.onload = setTitle;
+
+  function setRating(input) 
+  {
+    var list = ['one','two','three','four','five'];
+    var i = 0;
+
+    while (i < input) 
+    {
+      document.getElementById(list[i]).classList.remove('unchecked');
+      document.getElementById(list[i]).classList.add('checked');
+      i++;
+    }
+  }
+  </script>
+
 </body>
 
 </html>
