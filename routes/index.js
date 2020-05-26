@@ -71,12 +71,16 @@ router.get("/api/user/:id", (req, res, next) => {
 
 
 router.post("/api/user/", (req, res, next) => {
+  
   var errors=[]
-  if (!req.body.password){
-      errors.push("No password specified");
+  if (!req.body.name){
+      errors.push("No name specified");
   }
-  if (!req.body.email){
-      errors.push("No email specified");
+  if (!req.body.surname){
+      errors.push("No surname specified");
+  }
+  if (!req.body.subject){
+    errors.push("No subject specified");
   }
   if (errors.length){
       res.status(400).json({"error":errors.join(",")});
@@ -84,11 +88,13 @@ router.post("/api/user/", (req, res, next) => {
   }
   var data = {
       name: req.body.name,
-      email: req.body.email,
-      password : md5(req.body.password)
+      email: req.body.surname,
+      country : req.body.country,
+      subject : req.body.subject
   }
-  var sql ='INSERT INTO user (name, email, password) VALUES (?,?,?)'
+  var sql ='INSERT INTO user (name, surname, country, subject) VALUES (?,?,?,?)'
   var params =[data.name, data.email, data.password]
+
   db.run(sql, params, function (err, result) {
       if (err){
           res.status(400).json({"error": err.message})

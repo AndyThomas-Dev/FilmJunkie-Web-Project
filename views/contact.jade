@@ -69,15 +69,16 @@ block content
             style.
               .mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
         .column
-          form(action='/action_page.php')
-            label(for='fname') First Name
-            input#fname(type='text', name='firstname', placeholder='Your name..')
-            label(for='lname') Last Name
-            input#lname(type='text', name='lastname', placeholder='Your last name..')
+          form(action='/api/user/' method="post")
+            label(for='name') First Name
+            input#fname(type='text', name='name', placeholder='Your name..')
+            label(for='surname') Last Name
+            input#lname(type='text', name='surname', placeholder='Your last name..')
             label(for='country') Country
             select#country(name='country')
               option(value='australia') Australia
               option(value='canada') Canada
+              option(value='uk') UK
               option(value='usa') USA
             label(for='subject') Subject
             textarea#subject(name='subject', placeholder='Write something..', style='height:170px')
