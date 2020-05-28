@@ -12,18 +12,55 @@
 
 <body>
 
-<center><h1>Film Junkie.com</h1></center>
-<h3>vz19513 - Solo Project</h3>
+<center><h1>Film Junkie.com</h1>
+<h3>vz19513 - Solo Project</h3></center>
 
-<h3>Estimated Grades</h3>
+
+<h2>1. Running & Access</h2>
+<p>Run (with debug) using command:  DEBUG=website:* npm start </p>
+<p>Access via: http://localhost:3000/</p>
+
+<h2>2. Mission Statement</h2>
+<p>The website is intended to display content for a (fictional) group of film critics. The primary content is film reviews.</p>
+<p>With the subject matter, I have attempted to go for a very cinematic look, with a dark background and heavy emphasis on images just like in a cinema.</p>
+
+<h2>3. Sections</h2>
+<h3>Index (Homepage)</h3>
+<p>The main page is intended to showcase the featured review as well as the latest reviews.</p>
+
+<h3>About</h3>
+<p>Tabulated container with photos of and details of each reviewer.</p>
+
+<p>The images are not my own have been sourced from the following links:</p>
+
+<ul>
+<li><a href="<a https://www.pexels.com/photo/man-wearing-black-zip-up-jacket-near-beach-smiling-at-the-photo-736716/">Male #1</a></li>
+<li><a href="<a https://www.pexels.com/photo/man-standing-on-street-839011/">Male #2</a></li>
+<li><a href="<a https://www.pexels.com/photo/closeup-photo-of-woman-with-brown-coat-and-gray-top-733872/">Female #1</a></li>
+</ul>
+
+<h3>Contact</h3>
+<p>The Contact page is comprised essentially of two elements. A google map widget that shows the location of their office (simply set to UoB at the moment) and a contact form whereby
+the user can send a message to the reviewers.</p>
+
+<p>When the form is actioned, the data is checked and if it is valid then an INSERT query is actioned and the data is entered into the database.</p>
+
+<h3>All Films</h3>
+<p>This is a page contains a list of films that the group has reviewed along with some key details. This content is pulled from a database containing details of each reviewed film, accessed using SQLite3 and Ajax.</p>
+
+<h3>Review Pages</h3>
+There are web pages for each film review. Each review page will contain a short slideshow including images from the film, rating, reviewer and the written review.
+
+<h2>4. Estimated Grades</h3>
 
 Self-marking and justification:
 <ul>
 <li><b>A for HTML</b></li>
-
 <ul>
-<li>Significant use of HTML in a variety of forms.</li>
-<li>Regular use of W3 validator.</li>
+<li>Significant use of HTML in a variety of forms throughout and regular use of W3 validator.</li>
+<li>Many of the main pages ('About', 'Contact', 'Home'...) have been created using Jade templates to produce HTML.</li>
+<li>Text manipulation: use of bold, headers, centering, aligning, bulletpoints etc.</li>
+<li>Creation of containers such as forms or sidebars which are then manipulated by CSS.</li>
 </ul>
 	
 <li><b>A for CSS</b></li>
@@ -43,39 +80,46 @@ Self-marking and justification:
 
 <li><b>B for PNG</b></li>
 
-The following are all demonstrated by the images on the 'About' page and were acheived using the GIMP image manipulation program:
+The following are were all acheived using the GIMP image manipulation program:
 <ul>
 <li>Exporting downloaded image files as .PNG</li>
-<li>These images were cropped so that every one was the same size and then the colours modified to grayscale.</li>
-On the Home page:
-<li>Images were cropped and exported to fit their respective boxes.</li>
+<li>On the 'About' page, these images were cropped so that every one was the same size and then the colours modified to grayscale.</li>
+<li>On the Home page, images were cropped and exported to fit their respective boxes. In some cases, I used the Levels tool in GIMP to amend the brightness & contrast of the images.</li>
 </ul>
 
 <li><b>C for SVG</b></li>
 <ul>
 <li>Use of Inkscape to create the SVG banner header.</li>
+<li>This is a simple SVG file including text and an altered image. The image was found online, the colour was changed, rotated and then joined with the text.</li>
 </ul>
 
 <li><b>C for Server</b></li>
 
-<li><b>B for Database</b></li>
 <ul>
-<li>>Manually created a SQL databasee: this database contains a table for film details and a table for messages sent via the contact form.</li>
-<li>>SELECT query is utilised to display the film data (on the 'All Films' page.</li>
+<li>Set up a server and a router using an express tutorial.</li>
 </ul>
 
-<li><b>C for Dynamic pages</b></li>
+<li><b>B for Database</b></li>
+
+<ul>
+<li>Manually created a SQL databasee: this database contains a table for film details and a table for messages sent via the contact form.</li>
+<li>SELECT query is utilised to display the film data (on the 'All Films' page.</li>
+<li>INSERT query is utilised to insert the form data on the contact page into the database.</li>
+</ul>
+
+<li><b>B for Dynamic pages</b></li>
 
 <ul>
 <li>Use of Javascript routes to switch between views.</li>
-<li>Use of Jade templates.</li>
+<li>Use of Jade templates to create these views. Each of the views from the index inherits it's main characteristics from the 'Layout' template. This makes the website easier to maintain. For example, if the
+administrator wants to amend a link in the sidebar, they only need to amend the 'Layout' template rather than manually edit every page.</li>
 <li>Some key elements of the review pages are dynamic. For example, the user needs only set the film title and the relevant images are found and displayed in the slideshow.</li>
 </ul>
 
 </ul>
 
 <br>
-Below is for marker: 
+Below section is for marker: 
 
 <ul>
 <li>X for Depth (out of 20)</li>
