@@ -5,7 +5,6 @@ var path = require('path');
 var logger = require('morgan');
 var stylus = require('stylus');
 var indexRouter = require('./routes/index');
-
 var app = express();
 
 // For receiving JSON in posts

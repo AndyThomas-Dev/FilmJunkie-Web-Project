@@ -18,7 +18,8 @@
 
 <h2>1. Running & Access</h2>
 <p>Run (with debug) using command:  DEBUG=website:* npm start </p>
-<p>Access via: http://localhost:3000/</p>
+<p>Access via: https://localhost:3000/</p>
+<p>It will flag as unsafe due to the self-signed security certificate.</p>
 
 <h2>2. Mission Statement</h2>
 <p>The website is intended to display content for a (fictional) group of film critics. The primary content is film reviews.</p>
@@ -93,10 +94,11 @@ The following are were all acheived using the GIMP image manipulation program:
 <li>This is a simple SVG file including text and an altered image. The image was found online, the colour was changed, rotated and then joined with the text.</li>
 </ul>
 
-<li><b>C for Server</b></li>
+<li><b>B for Server</b></li>
 
 <ul>
 <li>Set up a server and a router using an express tutorial.</li>
+<li>Added a self-signed security certificate.</li>
 </ul>
 
 <li><b>B for Database</b></li>
@@ -105,6 +107,8 @@ The following are were all acheived using the GIMP image manipulation program:
 <li>Manually created a SQL databasee: this database contains a table for film details and a table for messages sent via the contact form.</li>
 <li>SELECT query is utilised to display the film data (on the 'All Films' page.</li>
 <li>INSERT query is utilised to insert the form data on the contact page into the database.</li>
+<li>Error messages are produced if fields do not contain data or a success message is produced if input is accepted.</li>
+<li>Currently, the responses are only in the form of JSON strings</li>
 </ul>
 
 <li><b>B for Dynamic pages</b></li>
