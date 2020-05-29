@@ -19,7 +19,7 @@
 <h2>1. Running & Access</h2>
 <p>Run (with debug) using command:  DEBUG=website:* npm start </p>
 <p>Access via: https://localhost:3000/</p>
-<p>It will flag as unsafe due to the self-signed security certificate.</p>
+<p>It will flag as unsafe due to the self-signed security certificate - allow insecure content to access.</p>
 
 <h2>2. Mission Statement</h2>
 <p>The website is intended to display content for a (fictional) group of film critics. The primary content is film reviews.</p>
@@ -84,7 +84,8 @@ Self-marking and justification:
 The following are were all acheived using the GIMP image manipulation program:
 <ul>
 <li>Exporting downloaded image files as .PNG</li>
-<li>On the 'About' page, these images were cropped so that every one was the same size and then the colours modified to grayscale.</li>
+<li>On the 'About' page, the main image ('The Team') is a collage of three images created using layering and cropping.</li>
+<li>The next images on this page (John/James/Sarah) were cropped so that every one was the same size and then the colours modified to grayscale.</li>
 <li>On the Home page, images were cropped and exported to fit their respective boxes. In some cases, I used the Levels tool in GIMP to amend the brightness & contrast of the images.</li>
 </ul>
 
@@ -94,11 +95,13 @@ The following are were all acheived using the GIMP image manipulation program:
 <li>This is a simple SVG file including text and an altered image. The image was found online, the colour was changed, rotated and then joined with the text.</li>
 </ul>
 
-<li><b>B for Server</b></li>
+<li><b>A for Server</b></li>
 
 <ul>
 <li>Set up a server and a router using an express tutorial.</li>
-<li>Added a self-signed security certificate.</li>
+<li>Port numbers are defined and the server is able to produce 404 errors for unknown links.</li>
+<li>Added a self-signed security certificate (requires allowing insecure content). I am aware this would be insufficient for a live website which
+would require certification from an authority.</li>
 </ul>
 
 <li><b>B for Database</b></li>
@@ -108,7 +111,7 @@ The following are were all acheived using the GIMP image manipulation program:
 <li>SELECT query is utilised to display the film data (on the 'All Films' page.</li>
 <li>INSERT query is utilised to insert the form data on the contact page into the database.</li>
 <li>Error messages are produced if fields do not contain data or a success message is produced if input is accepted.</li>
-<li>Currently, the responses are only in the form of JSON strings</li>
+<li>Currently, the responses are only in the form of JSON strings - I have not yet found a way to encorporate these into a more user friendly manner as yet.</li>
 </ul>
 
 <li><b>B for Dynamic pages</b></li>

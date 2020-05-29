@@ -1,9 +1,19 @@
 extends layout
 block content 
   .tab
-    button#defaultOpen.tablinks(onclick="openCity(event, 'John')") John Smith
+    button#defaultOpen.tablinks(onclick="openCity(event, 'Team')") The Team
+    button.tablinks(onclick="openCity(event, 'John')") John Smith
     button.tablinks(onclick="openCity(event, 'James')") James Joyce
     button.tablinks(onclick="openCity(event, 'Sarah')") Sarah Miller
+
+  #Team.tabcontent
+    center
+      h3 The Team
+      img(src='/images/team.png', alt='Team')
+
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod tristique mauris, vitae lobortis libero dictum eget. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed diam sem, egestas at varius in, imperdiet non sem. In ut nibh a odio egestas porttitor. Suspendisse eu neque sit amet augue cursus suscipit non in quam. Ut pharetra purus vitae pretium accumsan. Ut convallis sagittis eleifend. Nulla facilisi. Ut id nisl sollicitudin dolor porta consequat in id tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam mollis massa vel consequat bibendum. Integer pulvinar justo id tellus accumsan vehicula. Nam vel nibh feugiat, fermentum justo eu, feugiat diam. Duis iaculis ante id ultrices rhoncus. Curabitur lacinia suscipit lectus et lobortis.
+
+    p Fusce lacinia malesuada libero, euismod vulputate enim egestas ut. Aliquam eu magna nisl. Etiam vitae lorem interdum, tincidunt felis ultrices, varius lectus. Nullam euismod diam felis. Sed pretium facilisis nulla, sit amet volutpat tortor condimentum in. Suspendisse nulla felis, elementum in mi id, ullamcorper fermentum lorem. Fusce tempus, lacus eu vulputate ultricies, magna nisl feugiat est, nec rhoncus erat velit nec justo. Donec vel tempus quam, at placerat mi.
 
   #John.tabcontent
     center

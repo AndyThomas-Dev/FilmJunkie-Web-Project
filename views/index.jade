@@ -3,6 +3,11 @@ extends layout
 block content
 
   style.
+    div.a {
+      text-align: right;
+    } 
+
+  
     #body {
     margin: 0;
     padding: 0 0 30px;
@@ -259,6 +264,7 @@ block content
     #body > ul li a span {
     margin: 0;
     padding: 0px 0 0;
+    }
 
   #body
     #featured
@@ -283,3 +289,5 @@ block content
         a(href='articles/KnivesOut.html')
           img(src='images/index3.png', alt='')
           span knives out
+      .a
+        button(onclick='myFunction()') Next page
