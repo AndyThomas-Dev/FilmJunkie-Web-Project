@@ -1,10 +1,10 @@
 extends layout
 block content 
   .tab
-    button#defaultOpen.tablinks(onclick="openCity(event, 'Team')") The Team
-    button.tablinks(onclick="openCity(event, 'John')") John Smith
-    button.tablinks(onclick="openCity(event, 'James')") James Joyce
-    button.tablinks(onclick="openCity(event, 'Sarah')") Sarah Miller
+    button#defaultOpen.tablinks(onclick="openTab(event, 'Team')") The Team
+    button.tablinks(onclick="openTab(event, 'John')") John Smith
+    button.tablinks(onclick="openTab(event, 'James')") James Joyce
+    button.tablinks(onclick="openTab(event, 'Sarah')") Sarah Miller
 
   #Team.tabcontent
     center
@@ -43,19 +43,28 @@ block content
     p Fusce lacinia malesuada libero, euismod vulputate enim egestas ut. Aliquam eu magna nisl. Etiam vitae lorem interdum, tincidunt felis ultrices, varius lectus. Nullam euismod diam felis. Sed pretium facilisis nulla, sit amet volutpat tortor condimentum in. Suspendisse nulla felis, elementum in mi id, ullamcorper fermentum lorem. Fusce tempus, lacus eu vulputate ultricies, magna nisl feugiat est, nec rhoncus erat velit nec justo. Donec vel tempus quam, at placerat mi.
     
     script.
-      function openCity(evt, cityName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
+      function openTab(evt, cityName) 
+      {
+        var i, tabcontent, tablinks;
+
+        tabcontent = document.getElementsByClassName("tabcontent");
+
+        for (i = 0; i < tabcontent.length; i++) 
+        {
+        tabcontent[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablinks");
+
+        for (i = 0; i < tablinks.length; i++) 
+        {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
       }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(cityName).style.display = "block";
-      evt.currentTarget.className += " active";
-      }
+
       document.getElementById("defaultOpen").click();
 
 

@@ -28,11 +28,11 @@
         <div class="slideshow-container">
             <div class="mySlides fade">
               <div class="numbertext">1 / 3</div><img src="/images/1917-1.png" alt="Slide1" style="width:100%" id="box1">
-              <div class="text">John Travolta and Samuel L. Jackson</div>
+              <div class="text"></div>
             </div>
             <div class="mySlides fade">
               <div class="numbertext">2 / 3</div><img src="/images/1917-2.png" alt="Slide2" style="width:100%" id="box2">
-              <div class="text">John Travolta and Uma Thurman</div>
+              <div class="text"></div>
             </div>
             <div class="mySlides fade">
               <div class="numbertext">3 / 3</div><img src="/images/1917-3.png" alt="Slide3" style="width:100%" id="box3">
@@ -51,8 +51,11 @@
             <span class="fa fa-star" id="four"></span>
             <span class="fa fa-star" id="five"></span>
             <h3>Review by James Joyce</h3>
+
+            <button id="button" onclick="userLike()">Like film?</button>
+            <div id="response"></div>
           </div>
-        
+
         <div class="row">
           <div class="column">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non nisi est sit amet facilisis. Ac orci phasellus egestas tellus rutrum tellus pellentesque. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Accumsan sit amet nulla facilisi morbi. Duis ultricies lacus sed turpis tincidunt. Imperdiet dui accumsan sit amet nulla. Metus vulputate eu scelerisque felis. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor. Sed nisi lacus sed viverra tellus in. Ut porttitor leo a diam sollicitudin tempor id eu nisl.</p>
@@ -72,7 +75,6 @@
 
   <!-- For the slideshow -->
   <script>
-    
       var slideIndex = 1;
       showSlides(slideIndex);
 
@@ -104,10 +106,21 @@
       }
   </script>
 
+ <script>
+  function userLike() {
+    var string = "You like this film!";
+    document.getElementById('response').innerHTML = string;
+    localStorage.likedItem = string;
+  }
+  </script>
+
  <!-- The below scripts set up various elements of the page (intention is to link this directly to database) -->
   <script>
   function setTitle() 
   {
+      document.getElementById('response').innerHTML = localStorage.getItem("likedItem");
+      // Modify the pageTitle variable below and the rest of the function will 
+      // fetch details to fill the page.
       var pageTitle = '1917';
       var shortenedPageTitle = pageTitle.replace(/ /g,'');
       top.document.title = pageTitle + ' - FilmJunkie.com';
