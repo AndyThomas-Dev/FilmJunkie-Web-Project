@@ -5,8 +5,19 @@ block content
   style.
     div.a {
       text-align: right;
+       display: inline-block;
+       padding: 20px;
     } 
 
+    div.a2 {
+      text-align: left;
+       display: inline-block;
+    } 
+
+    .nowrap {
+      white-space: nowrap ;
+    }
+  
     a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
@@ -15,7 +26,7 @@ block content
     text-decoration: none;
     color: initial;
     }
-  
+
     #body {
     margin: 0;
     padding: 0 0 30px;
@@ -274,16 +285,7 @@ block content
     padding: 0px 0 0;
     }
 
-  #body
-    #featured
-      img(src='/images/banner-image.png', alt='banner')
-      div
-        h2 The Latest First World War Epic
-        span Five star reviews across the board.
-        span Does 1917 live up to the hype?
-        br
-        a.more(href='articles/1917.html') read more
-          
+  #body          
     ul
       li
         a(href='articles/PulpFiction.html')
@@ -297,5 +299,7 @@ block content
         a(href='articles/KnivesOut.html')
           img(src='images/index3.png', alt='')
           span knives out
+      .a2
+        a.button(href='/') Previous  
       .a
-        a.button(href='/page2') Next page
+        a.button(href='/wip.html') Next

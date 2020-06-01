@@ -2,15 +2,17 @@ var express = require('express');
 var router = express.Router();
 
 var createError = require('http-errors');
-// var express = require("express")
-// var app = express()
 var db = require("./database.js")
-// var md5 = require("md5")
-// var path = require('path');
 
 router.get('/', function(req, res){
   res.render('index', {
     title: 'Home'
+  });
+});
+
+router.get('/page2', function(req, res){
+  res.render('page2', {
+    title: 'Page 2'
   });
 });
 
