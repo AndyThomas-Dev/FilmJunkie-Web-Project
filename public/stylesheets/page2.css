@@ -1,0 +1,16 @@
+div.a {
+  text-align: right;
+   display: inline-block;
+   padding: 20px;
+} 
+
+div.a2 {
+  text-align: left;
+   display: inline-block;
+} 
+
+#body {
+  margin: 0;
+  padding: 0 0 30px;
+  text-align: center;
+  }
