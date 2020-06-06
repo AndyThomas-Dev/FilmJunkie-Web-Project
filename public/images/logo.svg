@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 23.15246 20.277323"
+   height="20.277323mm"
+   width="23.15246mm">
+  <defs
+     id="defs2">
+    <linearGradient
+       osb:paint="gradient"
+       id="linearGradient884">
+      <stop
+         id="stop880"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:1;" />
+      <stop
+         id="stop882"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:0;" />
+    </linearGradient>
+    <rect
+       id="rect835"
+       height="14.113306"
+       width="10.646043"
+       y="6.7590466"
+       x="8.2574205" />
+    <rect
+       x="8.2574205"
+       y="6.7590466"
+       width="10.646043"
+       height="14.113306"
+       id="rect835-6" />
+    <filter
+       id="filter2826"
+       style="color-interpolation-filters:sRGB">
+      <feTurbulence
+         id="feTurbulence2816"
+         result="result0"
+         seed="0"
+         baseFrequency="1"
+         numOctaves="3"
+         type="fractalNoise" />
+      <feColorMatrix
+         id="feColorMatrix2818"
+         type="saturate"
+         values="0"
+         result="result4" />
+      <feComposite
+         k4="0"
+         id="feComposite2820"
+         result="result2"
+         k3="0.5"
+         k2="0.5"
+         k1="1.25"
+         operator="arithmetic"
+         in2="result4"
+         in="SourceGraphic" />
+      <feBlend
+         id="feBlend2822"
+         in2="SourceGraphic"
+         in="result2"
+         mode="normal"
+         result="result5" />
+      <feComposite
+         id="feComposite2824"
+         result="result3"
+         operator="in"
+         in2="SourceGraphic"
+         in="result5" />
+    </filter>
+    <filter
+       id="filter2838"
+       style="color-interpolation-filters:sRGB">
+      <feTurbulence
+         id="feTurbulence2828"
+         result="result0"
+         seed="0"
+         baseFrequency="1"
+         numOctaves="3"
+         type="fractalNoise" />
+      <feColorMatrix
+         id="feColorMatrix2830"
+         type="saturate"
+         values="0"
+         result="result4" />
+      <feComposite
+         k4="0"
+         id="feComposite2832"
+         result="result2"
+         k3="0.5"
+         k2="0.5"
+         k1="1.25"
+         operator="arithmetic"
+         in2="result4"
+         in="SourceGraphic" />
+      <feBlend
+         id="feBlend2834"
+         in2="SourceGraphic"
+         in="result2"
+         mode="normal"
+         result="result5" />
+      <feComposite
+         id="feComposite2836"
+         result="result3"
+         operator="in"
+         in2="SourceGraphic"
+         in="result5" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-0.284094)"
+     id="layer2">
+    <path
+       id="path868"
+       style="opacity:0.996;fill:#cecece;fill-opacity:1;stroke-width:0.828796"
+       d="M 23.436555,10.138661 A 11.57623,10.138661 0 0 1 11.860325,20.277323 11.57623,10.138661 0 0 1 0.284094,10.138661 11.57623,10.138661 0 0 1 11.860325,0 11.57623,10.138661 0 0 1 23.436555,10.138661" />
+  </g>
+  <g
+     transform="translate(-4.3973465,-1.3708239)"
+     id="layer1">
+    <g
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:0;font-family:sans-serif;white-space:pre;shape-inside:url(#rect835);fill:#181818;fill-opacity:1;stroke:none;filter:url(#filter2826)"
+       id="text833"
+       aria-label="F">
+      <path
+         id="path2810"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;line-height:1.05;font-family:C059;-inkscape-font-specification:C059;fill:#181818;fill-opacity:1"
+         d="M 17.063139,7.3242093 H 8.6670344 V 7.987431 h 0.2539998 c 0.8043327,0.014111 1.0724436,0.056444 1.1853328,0.1975554 0.08467,0.1269999 0.08467,0.1552221 0.08467,0.8748882 v 6.7168834 c 0,0.719666 0,0.747889 -0.08467,0.874889 -0.1128892,0.141111 -0.3810001,0.197555 -1.1853328,0.197555 l -3.6125597,0.04625 0.5413902,0.625726 7.6572773,-0.0088 v -0.663222 h -0.465667 c -0.804332,0 -1.072443,-0.05644 -1.185332,-0.197555 -0.08467,-0.127 -0.08467,-0.169334 -0.08467,-0.874889 v -3.203219 h 0.282222 c 1.453444,-0.05645 1.975554,0.465666 2.031999,2.031998 h 0.663222 V 9.9770961 h -0.663222 c -0.08467,1.3828879 -0.635,1.9191099 -1.975554,1.9332209 H 11.771476 V 8.692986 c -0.01411,-0.5926662 0.127,-0.6914439 0.889,-0.705555 h 0.64911 c 2.314221,-0.014111 2.892776,0.5079996 3.33022,2.935109 h 0.620888 z" />
+    </g>
+    <g
+       style="font-style:normal;font-weight:normal;font-size:16.9333px;line-height:0;font-family:sans-serif;white-space:pre;shape-inside:url(#rect835-6);fill:#181818;fill-opacity:1;stroke:none;filter:url(#filter2838)"
+       id="text833-4"
+       transform="translate(7.8197331,4.2634588)"
+       aria-label="J">
+      <path
+         id="path2813"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:Kinnari;-inkscape-font-specification:Kinnari;fill:#181818;fill-opacity:1"
+         d="m 10.035809,10.485092 -0.03387,0.203199 c 0,0.180622 0.0508,0.349955 0.1524,0.507999 0.112889,0.146755 0.259644,0.220133 0.440266,0.220133 0.180622,0 0.333022,-0.1524 0.457199,-0.457199 0.135467,-0.304799 0.2032,-0.654754 0.2032,-1.0498646 V 1.984575 c 0,-0.677332 -0.558799,-1.01599798 -1.6763971,-1.01599798 v -0.338666 l 9.0544621,-0.008021 -0.510206,0.49080168 c -1.106309,0 -5.157596,0.1945512 -5.157596,0.8718832 v 6.5023872 c 0,1.1514645 -0.265288,2.0376409 -0.795865,2.6585279 -0.530577,0.620888 -1.179687,0.931332 -1.94733,0.931332 -0.7676427,0 -1.2756416,-0.191911 -1.5239967,-0.575732 -0.169333,-0.270933 -0.2539995,-0.502355 -0.2539995,-0.694266 0,-0.191911 0.073378,-0.372532 0.2201329,-0.541865 0.1580441,-0.169333 0.3499549,-0.254 0.5757322,-0.254 0.2257773,0 0.4120436,0.05644 0.5587989,0.169333 0.1580441,0.1016 0.2370662,0.2032 0.2370662,0.3048 z" />
+    </g>
+    <path
+       d="m 49.403278,9.212472 a 7.5489459,4.6655054 0 0 1 -0.0017,0.098322"
+       id="path2902"
+       style="opacity:0.996;fill:#181818;fill-opacity:1" />
+  </g>
+</svg>

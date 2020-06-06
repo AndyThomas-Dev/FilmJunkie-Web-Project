@@ -62,6 +62,7 @@ Self-marking and justification:
 I have utilised CSS throughout my website. As recommended in the guidance, these are contained within stylesheets that 
 are them linked to from within the HTML document.
 <ul>
+<li>Use of online CSS validator to validate </li>
 <li>Use of fade in & fade out (on hover) effects for links on the main page.</li>
 <li>Use of opacity effects (on hover) for images on the main page.</li>
 <li>Customising text layouts. For example, creation of a two column newspaper-style text layout for the review pages.</li>
@@ -95,9 +96,9 @@ to create dividers between the images.</li>
 </ul>
 
 <li><b>B for SVG</b></li>
+The following were all created within Inkscape (except the favicon).
 <ul>
-<li>Use of Inkscape to create the SVG banner header.</li>
-<li>This is a simple SVG file including text and an altered image. The image was found online, the colour was changed, rotated and then joined with the text.</li>
+<li>Creation of the banner header. This is a simple SVG file including text and an altered image. The image was found online, the colour was changed, rotated and then joined with the text.</li>
 <li>On the Contact page, I created two 'wings' using the shapes tool in Inkscape and manipulating the nodes in the path editor.</li>
 <li>The favicon was created using an online custom icon creator.</li>
 </ul>
@@ -116,8 +117,8 @@ would require certification from an authority but this demonstrates an understan
 
 <ul>
 <li>Manually created a SQL databasee: this database contains a table for film details and a table for messages sent via the contact form.</li>
-<li>SELECT query is utilised to display the film data (on the 'All Films' page.</li>
-<li>INSERT query is utilised to insert the form data on the contact page into the database.</li>
+<li><i>SELECT</i> query is utilised to display the film data (on the 'All Films' page.</li>
+<li><i>INSERT</i> query is utilised to insert the form data on the contact page into the database.</li>
 <li>Error messages are produced if fields do not contain data or a success message is produced if input is accepted.</li>
 <li>Currently, the responses are only in the form of JSON strings - I have not yet found a way to encorporate these into a more user friendly manner as yet.</li>
 </ul>
@@ -128,7 +129,9 @@ would require certification from an authority but this demonstrates an understan
 <li>Use of Javascript routes to switch between views.</li>
 <li>Use of Jade templates to create these views. Each of the views from the index inherits it's main characteristics from the 'Layout' template. This makes the website easier to maintain. For example, if the
 administrator wants to amend a link in the sidebar, they only need to amend the 'Layout' template rather than manually edit every page.</li>
-<li>Some key elements of the review pages are dynamic. For example, the user needs only set the film title and the relevant images are found and displayed in the slideshow.</li>
+<li>Some key elements of the review pages are dynamic. For example, the user needs only set the film title and the relevant images are found and displayed in the slideshow.
+  The benefit of this is that every single link and detail does not need to be changed.
+</li>
 </ul>
 
 </ul>
