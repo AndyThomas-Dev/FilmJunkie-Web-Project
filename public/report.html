@@ -8,6 +8,7 @@
 <body>
 
 <center><h1>Film Junkie.com</h1>
+  <a href="/">Home</a> 
 <h3>vz19513 - Solo Project</h3></center>
 
 
@@ -40,7 +41,7 @@ the user can send a message to the reviewers.</p>
 
 <p>When the form is actioned, the data is checked and if it is valid then an INSERT query is actioned and the data is entered into the database.</p>
 
-<h3>All Films</h3>
+<h3>Reviews</h3>
 <p>This is a page contains a list of films that the group has reviewed along with some key details. This content is pulled from a database containing details of each reviewed film, accessed using SQLite3 and Ajax.</p>
 
 <h3>Review Pages</h3>
@@ -54,7 +55,7 @@ Self-marking and justification:
 <ul>
 <li>Significant use of HTML in a variety of forms throughout and regular use of W3 validator.</li>
 <li>Many of the main pages ('About', 'Contact', 'Home'...) have been created using Jade templates to produce HTML.</li>
-<li>Text manipulation: use of bold, headers, centering, aligning, bulletpoints etc.</li>
+<li>Various text manipulation (often in conjunction with CSS): use of bold, headers, centering, aligning, bulletpoints etc.</li>
 <li>Creation of containers such as forms or sidebars which are then manipulated by CSS.</li>
 </ul>
 	
@@ -62,7 +63,7 @@ Self-marking and justification:
 I have utilised CSS throughout my website. As recommended in the guidance, these are contained within stylesheets that 
 are them linked to from within the HTML document.
 <ul>
-<li>Use of online CSS validator to validate </li>
+<li>Use of online CSS validator to check for errors.</li>
 <li>Use of fade in & fade out (on hover) effects for links on the main page.</li>
 <li>Use of opacity effects (on hover) for images on the main page.</li>
 <li>Customising text layouts. For example, creation of a two column newspaper-style text layout for the review pages.</li>
@@ -79,6 +80,7 @@ There is a substantial amount of client-side Javascript throughout my website.
 Entering 4 into the function displays a four star rating as above.</li>
 <li>I also wrote a very simple 'Like' button. This produces a message which is kept in local storage and is therefore reproduced everytime
 the user visits that particular page.</li>
+<li>Included a Google maps widget that displays the company location.</li>
 </ul>
 
 
@@ -87,9 +89,14 @@ the user visits that particular page.</li>
 The following are were all acheived using the GIMP image manipulation program:
 <ul>
 <li>Exporting downloaded image files as .PNG</li>
+
+<center><img src="/images/team.png" alt="WIP" width="500"></center>
 <li>On the 'About' page, the main image ('The Team') is a collage of three images created using layering, cropping and using paths to select diagonal areas that were filled
 to create dividers between the images.</li>
+<center><img src="/images/james.png" alt="WIP" width="500"></center>
 <li>The next images on this page (John/James/Sarah) were cropped so that every one was the same size and then the colours modified to grayscale.</li>
+
+<center><img src="/images/wip.png" alt="WIP" width="500"></center>
 <li>Similarly, I built the image on the 'Work In Progress' <a href="https://localhost:3000/wip.html">page</a> initially using layering and the transform tools.
   I then used the drop shadow filter and the glow filter to improve the overrall look of the image.</li>
 <li>On the Home page, images were cropped and exported to fit their respective boxes. In some cases, I used the Levels tool in GIMP to amend the brightness & contrast of the images.</li>
@@ -115,6 +122,7 @@ The following were all created within Inkscape (except the favicon).
 
 <ul>
 <li>Set up a server and a router using an express tutorial.</li>
+<center><img src="/images/404.png" alt="404 image" width="1000"></center>
 <li>Port numbers are defined and the server is able to produce 404 errors for unknown links.</li>
 <center><img src="/images/certificate-image.png" alt="certificate" width="500" height="600"></center>
 <li>Added a self-signed security certificate (requires allowing insecure content). I am aware this would be insufficient for a live website which
@@ -126,6 +134,9 @@ would require certification from an authority but this demonstrates an understan
 <ul>
 <li>Manually created a SQL databasee: this database contains a table for film details and a table for messages sent via the contact form.</li>
 <li><i>SELECT</i> query is utilised to display the film data (on the 'All Films' page.</li>
+<li>The Javascript & CSS used on this page is largely from a bootstrap though I have made some changes, primarily in terms of CSS
+  to improve the look of the site.
+</li>
 <li><i>INSERT</i> query is utilised to insert the form data on the contact page into the database.</li>
 <li>Error messages are produced if fields do not contain data or a success message is produced if input is accepted.</li>
 <li>Currently, the responses are only in the form of JSON strings - I have not yet found a way to encorporate these into a more user friendly manner as yet.</li>

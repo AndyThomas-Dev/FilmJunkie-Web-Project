@@ -22,7 +22,7 @@ var db = new sqlite3.Database('./db/MyDb.db');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-// Add restful controller
+// Add restful controller (for the DB)
 require('./EmployeeController')(app, db, jsonParser);
 
 app.use(logger('dev'));
