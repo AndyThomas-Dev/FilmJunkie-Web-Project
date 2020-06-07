@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <title>FilmJunkie.com</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/film-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/stylesheets/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <header><a href="/"><img src="/images/header-plain.svg" alt="FilmJunkie.com"></a></header>
+    <div class="sidenav">
+        <nav>
+            <ul>
+                <li> <a href="/">Home</a></li>
+                <li> <a href="/about">About</a></li>
+                <li> <a href="/contact">Contact</a></li>
+                <li> <a href="/films">Films</a></li>
+                <div class = "logo"><a href="/"><img src="/images/logo.svg" alt="Logo"></a></div>
+            </ul>
+        </nav>
+    </div>
+    <section id="wrapper" >
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div><img src="/images/1917-1.png" alt="Slide1" style="width:100%" id="box1">
+              <div class="text"></div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div><img src="/images/1917-2.png" alt="Slide2" style="width:100%" id="box2">
+              <div class="text"></div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div><img src="/images/1917-3.png" alt="Slide3" style="width:100%" id="box3">
+            </div><a onclick="plusSlides(-1)" class="prev">❮</a><a onclick="plusSlides(1)" class="next">❯</a>
+          </div>
+
+          <div style="text-align:center">
+            <span onclick="currentSlide(1)" class="dot"></span>
+            <span onclick="currentSlide(2)" class="dot"></span>
+            <span onclick="currentSlide(3)" class="dot"></span>
+
+            <h1>'Hard-hitting, immersive, and an impressive technical achievement.'</h1>
+            <span class="fa fa-star" id="one"></span>
+            <span class="fa fa-star" id="two"></span>
+            <span class="fa fa-star" id="three"></span>
+            <span class="fa fa-star" id="four"></span>
+            <span class="fa fa-star" id="five"></span>
+            <h3 id="author"></h3>
+
+            <button id="button" onclick="userLike()">Like film?</button>
+            <div id="response"></div>
+          </div>
+
+        <div class="row">
+          <div class="column">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non nisi est sit amet facilisis. Ac orci phasellus egestas tellus rutrum tellus pellentesque. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Accumsan sit amet nulla facilisi morbi. Duis ultricies lacus sed turpis tincidunt. Imperdiet dui accumsan sit amet nulla. Metus vulputate eu scelerisque felis. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor. Sed nisi lacus sed viverra tellus in. Ut porttitor leo a diam sollicitudin tempor id eu nisl.</p>
+
+            <p>Massa ultricies mi quis hendrerit dolor magna eget est lorem. Vitae ultricies leo integer malesuada nunc vel risus. Feugiat in fermentum posuere urna nec tincidunt praesent semper. Ac odio tempor orci dapibus. Tortor consequat id porta nibh. Semper auctor neque vitae tempus quam pellentesque nec nam aliquam. Sollicitudin aliquam ultrices sagittis orci a. Tortor condimentum lacinia quis vel eros donec ac odio tempor. Porttitor massa id neque aliquam vestibulum morbi blandit cursus risus. Faucibus nisl tincidunt eget nullam. Porta lorem mollis aliquam ut porttitor leo. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Tempus imperdiet nulla malesuada pellentesque elit eget. Augue neque gravida in fermentum et sollicitudin ac orci. Posuere urna nec tincidunt praesent semper feugiat nibh. Vitae ultricies leo integer malesuada. Morbi tincidunt augue interdum velit euismod in.</p>
+
+          </div>
+          <div class="column">
+            <p>A scelerisque purus semper eget duis at tellus at. Nullam non nisi est sit amet facilisis magna etiam. Tristique sollicitudin nibh sit amet commodo nulla. Ac felis donec et odio. Et leo duis ut diam quam nulla porttitor massa id. Dictumst quisque sagittis purus sit. Vulputate odio ut enim blandit volutpat maecenas volutpat blandit aliquam. Dui nunc mattis enim ut tellus elementum sagittis vitae. Vulputate mi sit amet mauris commodo. Elementum pulvinar etiam non quam lacus. Dui id ornare arcu odio ut sem nulla pharetra diam. Eget nulla facilisi etiam dignissim diam. Faucibus turpis in eu mi. Sodales ut eu sem integer vitae justo eget. Nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus.</p> 
+
+            <p>Massa vitae tortor condimentum lacinia quis vel. Diam quam nulla porttitor massa id neque aliquam vestibulum. Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque. Ac placerat vestibulum lectus mauris ultrices eros in cursus. Morbi tristique senectus et netus et. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus. Fermentum et sollicitudin ac orci. Risus feugiat in ante metus dictum at tempor. Urna cursus eget nunc scelerisque viverra mauris in aliquam sem. Cursus mattis molestie a iaculis at erat pellentesque. Nibh praesent tristique magna sit.</p>
+          </div>
+        </div>
+
+        <div class="footer">
+          <a href="/films">Reviews</a>  - <a href="/">Home</a> - <a href="/" id="next">Next Review</a> 
+        </div>
+      
+    </section>
+
+  <!-- Javascript below this point. -->
+  <!-- For the slideshow -->
+  <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) 
+      {
+      showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) 
+      {
+      showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) 
+      {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      }
+  </script>
+
+ <script>
+  function userLike() {
+    var string = "You like this film!";
+    document.getElementById('response').innerHTML = string;
+    localStorage.likedItem = string;
+  }
+  </script>
+
+ <!-- The below scripts set up various elements of the page (intention is to link this directly to database) -->
+
+ <script>
+
+    function trimString(input) 
+      {
+        var filmName2 = JSON.stringify(input);
+        var finalString = filmName2.substring(1,filmName2.length-1)
+        return(finalString);
+      }
+
+  $(document).ready(function(){
+
+      // USER: This variable needs to be amneded by the user.
+      var filmId = 4;
+
+      $.getJSON("https://localhost:3000/api/employees/" + filmId, function(result){
+
+        var items = [];
+        
+        $.each(result, function(i, field){
+
+          items.push(JSON.stringify(field))
+
+        });
+
+        var obj = JSON.parse(items[1]);
+
+        // Sets title
+        var filmName = obj.FilmName;
+        var fileNameTrim = trimString(filmName);
+        top.document.title = fileNameTrim + ' - FilmJunkie.com';
+
+        // Sets images
+        var filmLink = obj.Link;
+        var filmLinkTrim = trimString(filmLink); 
+        document.getElementById('box1').src = "/images/" + filmLinkTrim + "-1.png";
+        document.getElementById('box2').src = "/images/" + filmLinkTrim + "-2.png";
+        document.getElementById('box3').src = "/images/" + filmLinkTrim + "-3.png";
+
+        // Sets rating
+        var filmRating = obj.Rating;
+        var filmRatingTrim = trimString(filmRating); 
+        setRating(filmRatingTrim);
+
+        // Sets author
+        var title = obj.Title;
+        var titleTrim = trimString(title); 
+
+        var firstName = obj.FirstName;
+        var firstNameTrim = trimString(firstName); 
+
+        var lastName = obj.LastName;
+        var lastNameTrim = trimString(lastName); 
+
+        document.getElementById('author').innerHTML = titleTrim + " " + firstNameTrim + " " + lastNameTrim;
+        
+        // Sets next link
+        var yourElement = document.getElementById('next');
+        var link = "/articles/" + (filmId + 1) + ".html";
+        yourElement.setAttribute('href', link);
+
+        // Returns the full string
+        // document.getElementById('tex').innerHTML = JSON.stringify(items[1]);
+      });
+
+  });
+  </script>
+
+  <script>
+  function setTitle() 
+  {
+      // Finds whether this film has been liked by the user
+      document.getElementById('response').innerHTML = localStorage.getItem("likedItem");
+  }
+  window.onload = setTitle;
+
+  function setRating(input) 
+  {
+    var list = ['one','two','three','four','five'];
+    var i = 0;
+
+    while (i < input) 
+    {
+      document.getElementById(list[i]).classList.remove('unchecked');
+      document.getElementById(list[i]).classList.add('checked');
+      i++;
+    }
+  }
+  </script>
+
+</body>
+
+</html>

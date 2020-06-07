@@ -59,6 +59,23 @@ router.get("/api/users", (req, res, next) => {
 router.get("/api/user/:id", (req, res, next) => {
   var sql = "select * from user where id = ?"
   var params = [req.params.id]
+
+  db.get(sql, params, (err, row) => {
+      if (err) {
+        res.status(400).json({"error":err.message});
+        return;
+      }
+      res.json({
+          "message":"success",
+          "data":row
+      })
+    });
+});
+
+router.get("/api/employees/:FilmId", (req, res, next) => {
+  var sql = "select * from employees where FilmId = ?"
+  var params = [req.params.FilmId]
+
   db.get(sql, params, (err, row) => {
       if (err) {
         res.status(400).json({"error":err.message});
@@ -107,20 +124,6 @@ router.post("/api/user/", (req, res, next) => {
           "data": data,
           "id" : this.lastID
       })
-  });
-})
-
-
-router.delete("/api/user/:id", (req, res, next) => {
-  db.run(
-      'DELETE FROM user WHERE id = ?',
-      req.params.id,
-      function (err, result) {
-          if (err){
-              res.status(400).json({"error": res.message})
-              return;
-          }
-          res.json({"message":"deleted", rows: this.changes})
   });
 })
 

@@ -9,11 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="/stylesheets/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
@@ -57,7 +52,7 @@
             <span class="fa fa-star" id="three"></span>
             <span class="fa fa-star" id="four"></span>
             <span class="fa fa-star" id="five"></span>
-            <h3>James Joyce</h3>
+            <h3 id="author"></h3>
 
             <button id="button" onclick="userLike()">Like film?</button>
             <div id="response"></div>
@@ -78,11 +73,12 @@
         </div>
 
         <div class="footer">
-          <a href="/films">Reviews</a>  - <a href="/">Home</a> - <a href="/">Next Review</a> 
+          <a href="/films">Reviews</a>  - <a href="/">Home</a> - <a href="/" id="next">Next Review</a> 
         </div>
       
     </section>
 
+  <!-- Javascript below this point. -->
   <!-- For the slideshow -->
   <script>
       var slideIndex = 1;
@@ -125,24 +121,79 @@
   </script>
 
  <!-- The below scripts set up various elements of the page (intention is to link this directly to database) -->
+
+ <script>
+
+    function trimString(input) 
+      {
+        var filmName2 = JSON.stringify(input);
+        var finalString = filmName2.substring(1,filmName2.length-1)
+        return(finalString);
+      }
+
+  $(document).ready(function(){
+
+      // USER: This variable needs to be amneded by the user.
+      var filmId = 1;
+
+      $.getJSON("https://localhost:3000/api/employees/" + filmId, function(result){
+
+        var items = [];
+        
+        $.each(result, function(i, field){
+
+          items.push(JSON.stringify(field))
+
+        });
+
+        var obj = JSON.parse(items[1]);
+
+        // Sets title
+        var filmName = obj.FilmName;
+        var fileNameTrim = trimString(filmName);
+        top.document.title = fileNameTrim + ' - FilmJunkie.com';
+
+        // Sets images
+        var filmLink = obj.Link;
+        var filmLinkTrim = trimString(filmLink); 
+        document.getElementById('box1').src = "/images/" + filmLinkTrim + "-1.png";
+        document.getElementById('box2').src = "/images/" + filmLinkTrim + "-2.png";
+        document.getElementById('box3').src = "/images/" + filmLinkTrim + "-3.png";
+
+        // Sets rating
+        var filmRating = obj.Rating;
+        var filmRatingTrim = trimString(filmRating); 
+        setRating(filmRatingTrim);
+
+        // Sets author
+        var title = obj.Title;
+        var titleTrim = trimString(title); 
+
+        var firstName = obj.FirstName;
+        var firstNameTrim = trimString(firstName); 
+
+        var lastName = obj.LastName;
+        var lastNameTrim = trimString(lastName); 
+
+        document.getElementById('author').innerHTML = titleTrim + " " + firstNameTrim + " " + lastNameTrim;
+        
+        // Sets next link
+        var yourElement = document.getElementById('next');
+        var link = "/articles/" + (filmId + 1) + ".html";
+        yourElement.setAttribute('href', link);
+
+        // Returns the full string
+        // document.getElementById('tex').innerHTML = JSON.stringify(items[1]);
+      });
+
+  });
+  </script>
+
   <script>
   function setTitle() 
   {
       // Finds whether this film has been liked by the user
       document.getElementById('response').innerHTML = localStorage.getItem("likedItem");
-
-      // Modify the pageTitle variable below and the rest of the function will 
-      // fetch details to fill the page.
-      var pageTitle = '1917';
-      var shortenedPageTitle = pageTitle.replace(/ /g,'');
-      top.document.title = pageTitle + ' - FilmJunkie.com';
-
-      document.getElementById('box1').src = "/images/" + shortenedPageTitle + "-1.png";
-      document.getElementById('box2').src = "/images/" + shortenedPageTitle + "-2.png";
-      document.getElementById('box3').src = "/images/" + shortenedPageTitle + "-3.png";
-
-      // User inputs star rating here
-      setRating(5);
   }
   window.onload = setTitle;
 
