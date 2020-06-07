@@ -29,7 +29,7 @@ function jsonToTable (data) {
                     + "</td><td>" + employee.Title  + " " + employee.FirstName + " " +  employee.LastName  
                     + "</td><td>" + employee.FilmName    
                     + "</td><td>" + employee.Rating
-                    + "</td><td>" + "<a href=\"articles/" + employee.Link + ".html\">&#128279</a>"                              
+                    + "</td><td>" + "<a href=\"articles/" + employee.FilmId + ".html\">&#128279</a>"                              
                     + "</td></tr>";                            
     }
 
