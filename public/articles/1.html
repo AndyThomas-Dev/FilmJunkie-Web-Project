@@ -114,15 +114,30 @@
 
  <script>
   function userLike() {
-    var string = "You like this film!";
-    document.getElementById('response').innerHTML = string;
-    localStorage.likedItem = string;
+    // var string = "You like this film!";
+    // document.getElementById('response').innerHTML = string;
+    changediv();
+
   }
   </script>
 
  <!-- The below scripts set up various elements of the page (intention is to link this directly to database) -->
 
  <script>
+
+    function changediv()
+    {   
+
+        if (document.getElementById("response")) {
+            document.getElementById("response").innerHTML = "Liked!";          
+            document.getElementById("response").setAttribute("id", "response2");
+        }
+        else {
+            document.getElementById("response2").setAttribute("id", "response");
+            document.getElementById("response").innerHTML = "Unliked!"; 
+        }
+
+    }
 
     function trimString(input) 
       {
@@ -190,13 +205,6 @@
   </script>
 
   <script>
-  function setTitle() 
-  {
-      // Finds whether this film has been liked by the user
-      document.getElementById('response').innerHTML = localStorage.getItem("likedItem");
-  }
-  window.onload = setTitle;
-
   function setRating(input) 
   {
     var list = ['one','two','three','four','five'];

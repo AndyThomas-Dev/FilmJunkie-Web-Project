@@ -56,6 +56,8 @@
 
             <button id="button" onclick="userLike()">Like film?</button>
             <div id="response"></div>
+            <div id="filmNameHold" style="display: none;">
+
           </div>
 
         <div class="row">
@@ -112,14 +114,6 @@
       }
   </script>
 
- <script>
-  function userLike() {
-    var string = "You like this film!";
-    document.getElementById('response').innerHTML = string;
-    localStorage.likedItem = string;
-  }
-  </script>
-
  <!-- The below scripts set up various elements of the page (intention is to link this directly to database) -->
 
  <script>
@@ -151,7 +145,14 @@
         // Sets title
         var filmName = obj.FilmName;
         var fileNameTrim = trimString(filmName);
+
         top.document.title = fileNameTrim + ' - FilmJunkie.com';
+
+        document.getElementById('filmNameHold').innerHTML = fileNameTrim;
+
+        document.getElementById("response").id = "response" + fileNameTrim;
+        document.getElementById("response" + fileNameTrim).innerHTML = localStorage.getItem("likedItem");
+
 
         // Sets images
         var filmLink = obj.Link;
@@ -187,15 +188,15 @@
       });
 
   });
+
+  function userLike() {
+          var string = "You like " + document.getElementById('filmNameHold').innerHTML;
+          document.getElementById('response'+document.getElementById('filmNameHold').innerHTML).innerHTML = string;
+          localStorage.likedItem = string;
+        }
   </script>
 
   <script>
-  function setTitle() 
-  {
-      // Finds whether this film has been liked by the user
-      document.getElementById('response').innerHTML = localStorage.getItem("likedItem");
-  }
-  window.onload = setTitle;
 
   function setRating(input) 
   {
