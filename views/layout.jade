@@ -23,9 +23,27 @@ html(lang='en')
             a(href="/films") Reviews
           li 
             a(href="/report.html") Report
+          li
+            ""
+          li
+            button#button(onclick='userLike()') Like FilmJunkie?
+          li
+            #likeSite
           .logo
             a(href='/')
               img(src='/images/logo.svg', alt='Logo')
+
+        script.
+          function userLike() {
+          var string = "You like FilmJunkie!";
+          document.getElementById('likeSite').innerHTML = string;
+          localStorage.likedItem = string;
+          }
+
+          function getLike() {
+            document.getElementById('likeSite').innerHTML = localStorage.getItem("likedItem");
+          }
+          window.onload = getLike;
 
     section#wrapper
         block content

@@ -412,3 +412,7 @@ position:fixed; width:10%; height:100px; padding:5px; bottom:0px;
 .logo img:hover {
   opacity: 1;
   }
+
+#likeSite{
+  color: grey;
+}

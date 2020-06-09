@@ -21,7 +21,8 @@
                 <li> <a href="/">Home</a></li>
                 <li> <a href="/about">About</a></li>
                 <li> <a href="/contact">Contact</a></li>
-                <li> <a href="/films">Films</a></li>
+                <li> <a href="/films">Reviews</a></li>
+                <li> <a href="/report.html">Report</a></li>
                 <div class = "logo"><a href="/"><img src="/images/logo.svg" alt="Logo"></a></div>
             </ul>
         </nav>
@@ -56,8 +57,6 @@
 
             <button id="button" onclick="userLike()">Like film?</button>
             <div id="response"></div>
-            <div id="filmNameHold" style="display: none;">
-
           </div>
 
         <div class="row">
@@ -75,7 +74,7 @@
         </div>
 
         <div class="footer">
-          <a href="/films">Reviews</a>  - <a href="/">Home</a> - <a href="/" id="next">Next Review</a> 
+          <a href="/" id="previous">Previous -</a>  <a href="/films">All</a>  - <a href="/">Home</a> - <a href="/" id="next">Next</a> 
         </div>
       
     </section>
@@ -114,7 +113,25 @@
       }
   </script>
 
- <!-- The below scripts set up various elements of the page (intention is to link this directly to database) -->
+ <script>
+  function userLike() {
+    if (document.getElementById("response")) {
+            document.getElementById("response").innerHTML = "Liked!";          
+            document.getElementById("response").setAttribute("id", "response2");
+        }
+        else {
+            document.getElementById("response2").setAttribute("id", "response");
+            document.getElementById("response").innerHTML = "Unliked!"; 
+        }
+  }
+  </script>
+
+ <!-- The below scripts set up the following page elements:
+    1. Images for slideshow
+    2. Author 
+    3. Rating
+    4. Links 
+-->
 
  <script>
 
@@ -127,7 +144,7 @@
 
   $(document).ready(function(){
 
-      // USER: This variable needs to be amneded by the user.
+      // USER: This variable needs to be amended by the user to the FilmId.
       var filmId = 2;
 
       $.getJSON("https://localhost:3000/api/employees/" + filmId, function(result){
@@ -145,14 +162,7 @@
         // Sets title
         var filmName = obj.FilmName;
         var fileNameTrim = trimString(filmName);
-
         top.document.title = fileNameTrim + ' - FilmJunkie.com';
-
-        document.getElementById('filmNameHold').innerHTML = fileNameTrim;
-
-        document.getElementById("response").id = "response" + fileNameTrim;
-        document.getElementById("response" + fileNameTrim).innerHTML = localStorage.getItem("likedItem");
-
 
         // Sets images
         var filmLink = obj.Link;
@@ -183,21 +193,16 @@
         var link = "/articles/" + (filmId + 1) + ".html";
         yourElement.setAttribute('href', link);
 
-        // Returns the full string
-        // document.getElementById('tex').innerHTML = JSON.stringify(items[1]);
+        // Sets previous link
+        var yourElement2 = document.getElementById('previous');
+        var link = "/articles/" + (filmId - 1) + ".html";
+        yourElement2.setAttribute('href', link);
       });
 
   });
-
-  function userLike() {
-          var string = "You like " + document.getElementById('filmNameHold').innerHTML;
-          document.getElementById('response'+document.getElementById('filmNameHold').innerHTML).innerHTML = string;
-          localStorage.likedItem = string;
-        }
   </script>
 
   <script>
-
   function setRating(input) 
   {
     var list = ['one','two','three','four','five'];

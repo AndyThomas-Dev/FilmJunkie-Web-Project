@@ -11,7 +11,6 @@
   <a href="/">Home</a> 
 <h3>vz19513 - Solo Project</h3></center>
 
-
 <h2>1. Running & Access</h2>
 <p>Run (with debug) using command:  DEBUG=website:* npm start </p>
 <p>Access via: https://localhost:3000/</p>
@@ -42,7 +41,9 @@ the user can send a message to the reviewers.</p>
 <p>When the form is actioned, the data is checked and if it is valid then an INSERT query is actioned and the data is entered into the database.</p>
 
 <h3>Reviews</h3>
-<p>This is a page contains a list of films that the group has reviewed along with some key details. This content is pulled from a database containing details of each reviewed film, accessed using SQLite3 and Ajax.</p>
+<p>This is a page contains a list of films that the group has reviewed along with some key details. This content is pulled from a database containing details of each reviewed film, accessed using SQLite3 and Ajax.
+  The images used on these pages are not my own.
+</p>
 
 <h3>Review Pages</h3>
 There are web pages for each film review. Each review page will contain a short slideshow including images from the film, rating, reviewer and the written review.
@@ -78,8 +79,7 @@ There is a substantial amount of client-side Javascript throughout my website.
 <center><img src="/images/4-star-rating.png" alt="rating"></center>
 <li>I wrote a Javascript function ('setRating') which manipulates the HTML classes to display a star rating based on input. i.e.
 Entering 4 into the function displays a four star rating as above.</li>
-<li>I also wrote a very simple 'Like' button. This produces a message which is kept in local storage and is therefore reproduced everytime
-the user visits that particular page.</li>
+<li>I also wrote a very simple 'Like' button that displays a message each time the button is clicked.</li>
 <li>Included a Google maps widget that displays the company location.</li>
 </ul>
 
@@ -145,11 +145,10 @@ would require certification from an authority but this demonstrates an understan
 <li><b>B for Dynamic pages</b></li>
 
 <ul>
-<li>Use of Javascript routes to switch between views.</li>
-<li>Use of Jade templates to create these views. Each of the views from the index inherits it's main characteristics from the 'Layout' template. This makes the website easier to maintain. For example, if the
+<li>Use of Javascript routes & Jade templates to switch between views. Each of the views from the index inherits it's main characteristics from the 'Layout' template. This makes the website easier to maintain. For example, if the
 administrator wants to amend a link in the sidebar, they only need to amend the 'Layout' template rather than manually edit every page.</li>
-<li>Some key elements of the review pages are dynamic. For example, the user needs only set the film title and the relevant images are found and displayed in the slideshow.
-  The benefit of this is that every single link and detail does not need to be changed.
+<center><img src="/images/dynamic-page.png" alt="dynamic" width="600"></center>
+<li>The key elements of the review pages are dynamic. For example, the user needs only set the FilmId and the relevant images, links, rating and author will populate.
 </li>
 </ul>
 

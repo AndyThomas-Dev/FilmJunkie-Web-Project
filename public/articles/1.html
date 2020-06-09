@@ -21,7 +21,8 @@
                 <li> <a href="/">Home</a></li>
                 <li> <a href="/about">About</a></li>
                 <li> <a href="/contact">Contact</a></li>
-                <li> <a href="/films">Films</a></li>
+                <li> <a href="/films">Reviews</a></li>
+                <li> <a href="/report.html">Report</a></li>
                 <div class = "logo"><a href="/"><img src="/images/logo.svg" alt="Logo"></a></div>
             </ul>
         </nav>
@@ -73,7 +74,7 @@
         </div>
 
         <div class="footer">
-          <a href="/films">Reviews</a>  - <a href="/">Home</a> - <a href="/" id="next">Next Review</a> 
+          <a href="/films">Reviews</a>  - <a href="/">Home</a> - <a href="/" id="next">Next</a> 
         </div>
       
     </section>
@@ -114,21 +115,7 @@
 
  <script>
   function userLike() {
-    // var string = "You like this film!";
-    // document.getElementById('response').innerHTML = string;
-    changediv();
-
-  }
-  </script>
-
- <!-- The below scripts set up various elements of the page (intention is to link this directly to database) -->
-
- <script>
-
-    function changediv()
-    {   
-
-        if (document.getElementById("response")) {
+    if (document.getElementById("response")) {
             document.getElementById("response").innerHTML = "Liked!";          
             document.getElementById("response").setAttribute("id", "response2");
         }
@@ -136,8 +123,17 @@
             document.getElementById("response2").setAttribute("id", "response");
             document.getElementById("response").innerHTML = "Unliked!"; 
         }
+  }
+  </script>
 
-    }
+ <!-- The below scripts set up the following page elements:
+    1. Images for slideshow
+    2. Author 
+    3. Rating
+    4. Links 
+-->
+
+ <script>
 
     function trimString(input) 
       {
@@ -196,9 +192,6 @@
         var yourElement = document.getElementById('next');
         var link = "/articles/" + (filmId + 1) + ".html";
         yourElement.setAttribute('href', link);
-
-        // Returns the full string
-        // document.getElementById('tex').innerHTML = JSON.stringify(items[1]);
       });
 
   });
