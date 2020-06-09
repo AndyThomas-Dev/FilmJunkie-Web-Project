@@ -416,3 +416,10 @@ position:fixed; width:10%; height:100px; padding:5px; bottom:0px;
 #likeSite{
   color: grey;
 }
+
+#button{
+  opacity: 0.8;
+  padding: 15px 15px;
+  text-align: center;
+  text-emphasis: bold;
+}
