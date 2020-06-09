@@ -74,7 +74,7 @@
         </div>
 
         <div class="footer">
-          <a href="/" id="previous">Previous -</a>  <a href="/films">All</a>  - <a href="/">Home</a> - <a href="/" id="next">Next</a> 
+          <a href="/" id="previous">Previous -</a>  <a href="/films">All</a>  - <a href="/">Home</a> - <a href="/wip.html" id="next">Next</a> 
         </div>
       
     </section>
@@ -145,7 +145,7 @@
   $(document).ready(function(){
 
       // USER: This variable needs to be amended by the user to the FilmId.
-      var filmId = 2;
+      var filmId = 7;
 
       $.getJSON("https://localhost:3000/api/employees/" + filmId, function(result){
 
@@ -189,9 +189,9 @@
         document.getElementById('author').innerHTML = titleTrim + " " + firstNameTrim + " " + lastNameTrim;
         
         // Sets next link
-        var yourElement = document.getElementById('next');
-        var link = "/articles/" + (filmId + 1) + ".html";
-        yourElement.setAttribute('href', link);
+        // var yourElement = document.getElementById('next');
+        // var link = "/articles/" + (filmId + 1) + ".html";
+        // yourElement.setAttribute('href', link);
 
         // Sets previous link
         var yourElement2 = document.getElementById('previous');

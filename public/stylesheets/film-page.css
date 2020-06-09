@@ -8,6 +8,17 @@ body {
   * {box-sizing: border-box}
 }
 
+body a {
+  font-family: Helvetica, sans-serif;
+  color: rgb(107, 107, 107);
+  text-decoration: none;
+  text-emphasis: bold;
+}
+
+body a:hover {
+  color: rgba(0,0,0,0.8);
+}
+
 * {
   box-sizing: border-box;
 }

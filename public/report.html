@@ -13,7 +13,8 @@
 
 <h2>1. Running & Access</h2>
 <p>Run (with debug) using command:  DEBUG=website:* npm start </p>
-<p>Access via: https://localhost:3000/</p>
+<p>Access via: <a href="https://localhost:3000/">https://localhost:3000/</a>
+</p>
 <p>It will flag as unsafe due to the self-signed security certificate - allow insecure content to access.</p>
 
 <h2>2. Mission Statement</h2>
@@ -46,7 +47,8 @@ the user can send a message to the reviewers.</p>
 </p>
 
 <h3>Review Pages</h3>
-There are web pages for each film review. Each review page will contain a short slideshow including images from the film, rating, reviewer and the written review.
+There are web pages for each film review. Each review page will contain a short slideshow including images from the film, rating, reviewer and the written review as well
+as a 'Like' button to like the film.
 
 <h2>4. Estimated Grades</h3>
 
@@ -79,7 +81,8 @@ There is a substantial amount of client-side Javascript throughout my website.
 <center><img src="/images/4-star-rating.png" alt="rating"></center>
 <li>I wrote a Javascript function ('setRating') which manipulates the HTML classes to display a star rating based on input. i.e.
 Entering 4 into the function displays a four star rating as above.</li>
-<li>I also wrote a very simple 'Like' button that displays a message each time the button is clicked.</li>
+<li>Wrote the code for a very simple 'Like' button that displays a message each time the button is clicked.</li>
+<li>Wrote the code for a 'Like' button on the main pages and once clicked, the result is kept in LocalStorage.</li>
 <li>Included a Google maps widget that displays the company location.</li>
 </ul>
 
@@ -100,6 +103,8 @@ to create dividers between the images.</li>
 <li>Similarly, I built the image on the 'Work In Progress' <a href="https://localhost:3000/wip.html">page</a> initially using layering and the transform tools.
   I then used the drop shadow filter and the glow filter to improve the overrall look of the image.</li>
 <li>On the Home page, images were cropped and exported to fit their respective boxes. In some cases, I used the Levels tool in GIMP to amend the brightness & contrast of the images.</li>
+<img src="/images/loading-image.png" alt="loading" width="500"></center>
+<li>I created a simple loading image that will display briefly before Javascript amends the links.</li>
 </ul>
 
 <li><b>B for SVG</b></li>
