@@ -19,7 +19,7 @@
 
 <h2>2. Mission Statement</h2>
 <p>The website is intended to display content for a (fictional) group of film critics. The primary content is film reviews.</p>
-<p>With the subject matter, I have attempted to go for a very cinematic look, with a dark background and heavy emphasis on images just like in a cinema.</p>
+<p>With the subject matter, I have attempted to go for a very cinematic look, with a dark background and heavy emphasis on images to mimic a cinema.</p>
 
 <h2>3. Sections</h2>
 <h3>Index (Homepage)</h3>
@@ -43,12 +43,11 @@ the user can send a message to the reviewers.</p>
 
 <h3>Reviews</h3>
 <p>This is a page contains a list of films that the group has reviewed along with some key details. This content is pulled from a database containing details of each reviewed film, accessed using SQLite3 and Ajax.
-  The images used on these pages are not my own.
 </p>
 
 <h3>Review Pages</h3>
 There are web pages for each film review. Each review page will contain a short slideshow including images from the film, rating, reviewer and the written review as well
-as a 'Like' button to like the film.
+as a 'Like' button to like the film. The images used on these pages are not my own and is covered by fair use (for the purpose of criticism or commentary).
 
 <h2>4. Estimated Grades</h3>
 
@@ -67,10 +66,10 @@ I have utilised CSS throughout my website. As recommended in the guidance, these
 are them linked to from within the HTML document.
 <ul>
 <li>Use of online CSS validator to check for errors.</li>
-<li>Use of fade in & fade out (on hover) effects for links on the main page.</li>
+<li>Use of fade in & fade out (on hover) effects for links on the main page. For example, logo image in button left corner.</li>
 <li>Use of opacity effects (on hover) for images on the main page.</li>
 <li>Customising text layouts. For example, creation of a two column newspaper-style text layout for the review pages.</li>
-<li>Use of CSS to set style and positioning of 'Next' & 'Previous' page buttons.</li>
+<li>Use of CSS to set style and positioning of buttons.</li>
 </ul>
 
 <li><b>B for JS</b></li>
@@ -83,7 +82,7 @@ There is a substantial amount of client-side Javascript throughout my website.
 Entering 4 into the function displays a four star rating as above.</li>
 <li>Wrote the code for a very simple 'Like' button that displays a message each time the button is clicked.</li>
 <li>Wrote the code for a 'Like' button on the main pages and once clicked, the result is kept in LocalStorage. (I'm aware
-  this is a bit unslightly but demonstrates knowledge of LocalStorage.)
+  this is a bit unslightly but included to demonstrate knowledge of LocalStorage.)
 </li>
 <li>Included a Google maps widget that displays the company location on the Contact page.</li>
 </ul>
@@ -156,7 +155,7 @@ would require certification from an authority but this demonstrates an understan
 <li>Use of Javascript routes & Jade templates to switch between views. Each of the views from the index inherits it's main characteristics from the 'Layout' template. This makes the website easier to maintain. For example, if the
 administrator wants to amend a link in the sidebar, they only need to amend the 'Layout' template rather than manually edit every page.</li>
 <center><img src="/images/dynamic-page.png" alt="dynamic" width="600"></center>
-<li>The key elements of the review pages are dynamic. For example, the user needs only set the FilmId and the relevant images, links, rating and author will populate.
+<li>The key elements of the review pages are dynamic. For example, the user needs only set the FilmId (as indicated within the function) and the relevant images, links, rating and author will populate.
 </li>
 </ul>
 
